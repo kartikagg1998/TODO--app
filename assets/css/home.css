@@ -1,0 +1,145 @@
+#app-container
+{
+    height:600px;
+    width:600px;
+    margin-left:400px;
+  
+}
+
+#heading
+{
+    text-align:center;
+    background-color:coral;
+}
+
+form{
+    
+    width:600px;
+     padding-bottom:10px
+}
+
+input{
+    width:600px;
+    height:50px;
+    margin-bottom:20px;
+    border:0.8px solid grey;
+}
+
+ #category-selector
+{
+    height:50px;
+    width:250px;
+    position:absolute;
+    border:0.8px solid grey;
+}
+#datelabel
+{
+    position:relative;
+    left:300px;
+    top:-32px;
+}
+#dateinput
+{
+    height:50px;
+    width:250px;
+    position:relative;
+    left:218px;
+    top:0px;
+    
+}
+#priority
+{
+    height:40px;
+    width:200px; 
+    display:block; 
+    margin-bottom:30px;
+    
+}
+#add-button
+{
+    background-color: black; 
+    height:50px;
+    width:130px;
+    color:white;
+    position:absolute;
+    margin-left:150px;
+    border:1px solid black;
+    font-size: 16px;
+    padding:11.3px;
+}
+#delete-button
+{
+    background-color: red;
+    height:50px;
+    width:150px;
+    color:white;
+    border:1px solid red;
+    left:300px;
+    top:-26.5px;
+    position:relative;
+    font-size: 15px;
+   
+}
+ul{
+    list-style: none;
+}
+.list-item
+{
+    height:30px;
+    width:600px;
+    background-color: rgb(68, 248, 122);
+    margin-left:-38.5px;
+    font-size: 17px;
+    border-top: 1px solid rgb(0, 0, 0);
+    padding-bottom:50px;
+    font-weight:550;
+}
+
+.list-item:hover
+{
+    background-color:yellow;
+}
+
+.item-description
+{
+display:inline-block;
+text-align: center;
+ position:absolute;
+}
+
+ .check
+{
+    display:inline;
+} 
+ #checkbox
+{
+    height:20px;
+    width:20px;
+    
+} 
+
+.item-category
+{
+margin-left: 300px;
+display: inline-block;
+background-color:purple;
+transition:1s ease-in-out;
+color:white;
+padding:5px;
+padding-left:10px;
+padding-right: 10px;
+left:120px;
+position:relative;
+}
+
+ .due-date
+{
+    margin-top:-15px;
+    margin-left:15px;
+   
+} 
+ #circle
+{
+    color:blue;
+    
+} 

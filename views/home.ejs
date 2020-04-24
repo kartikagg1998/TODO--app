@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>
+            <%=title%>
+        </title>
+
+        <!-- link for adding icons from fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="css/home.css">
+
+    </head>
+    <body>
+        <div id="app-container">
+        <h1 id="heading">TODO App</h1>
+
+         <!-- form for making a new to-do listitem -->
+
+        <form action="/addTask" method="post">
+            <label>DESCRIPTION</label>
+            <br>
+            <input id="description-box"type="text" name="description" placeholder="What do you need to do?" required>
+            <br>
+             <label>CATEGORY</label>
+             <br>
+            <select id="category-selector" name="category" placeholder="select category">CATEGORY
+                <option style=>Personal</option>
+                <option><i class="fal fa-home"></i>Home</option>
+                <option>Work</option>
+                <option>School</option>
+                <option>Cleanning</option>
+                <option>Other</option>
+                
+            </select>
+            
+            <label id="datelabel" >DUE DATE</label>
+            
+            <input type="date" id="dateinput"name="dueDate"required>
+            <br>
+            <label>Priority</label>
+            <br>
+            <select name="priority" id="priority">Priority
+                
+                <option style="background-color:red">High</option>
+                <option style="background-color:yellow">Medium</option>
+                <option style="background-color: green;">Low</option>
+                
+                </select>
+            
+            <button id="add-button" type="submit">
+                <i class="fas fa-plus"></i>
+                &nbsp;&nbsp;ADD TASK
+            </buton>
+        </form>
+
+
+        <form method="get" action="/deletetask"> 
+            <button id="delete-button" type="submit">
+                <i class="fas fa-trash-alt"></i></a>
+                &nbsp;&nbsp; DELETE TASK</button>
+        <ul>
+                  <% for(let i of list){%>
+            <li>
+                <div class="list-item">
+                    <div class="check">
+                   
+                    <input type="checkbox"name=<%=i._id%> id="checkbox">
+                    </div>
+                <p class="item-description">
+                    <%=i.description%>
+                </p>
+                <p
+                class="item-category ">
+                  <%=i.category%>
+                </p>
+                <p class="due-date">
+                    <i class="fas fa-calendar-alt due-date"></i>
+                    <%=i.dueDate%>&nbsp;&nbsp;
+                    
+                    <i class="fa fa-circle" id="circle" aria-hidden="true"></i>
+                    <%=i.priority%>
+                </p>
+                </div>
+              </li>
+            <%}%>
+        </ul>
+        </form>
+    </div>
+    <script type="text/javascript"src="js/home.js">
+
+    </script>
+    </body>
+</html>
